@@ -6,3 +6,6 @@ Pada bagian ini, saya melihat bagaimana response HTTP mulai dibangun secara lang
 
 # Commit 3 Reflection notes
 Pemisahan response dilakukan dengan menentukan status_line dan filename terlebih dahulu berdasarkan request, lalu pembacaan file dan penyusunan HTTP response dikerjakan di satu tempat. Bagian yang berubah (jenis response) dipisahkan dari bagian yang tetap (format response), sehingga alurnya lebih jelas. Refactoring ini diperlukan agar tidak terjadi duplikasi kode di setiap kondisi if-else, sekaligus membuat kode lebih mudah dibaca dan dikembangkan ketika nanti ingin menambah route atau variasi response lain.
+
+# Commit 4 Reflection notes
+Match membuat penanganan request jadi lebih rapi karena setiap route langsung dipasangkan dengan response-nya. Penambahan /sleep juga menunjukkan bahwa satu request bisa menahan proses lain, sehingga terlihat bagaimana server bekerja secara berurutan.
