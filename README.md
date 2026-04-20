@@ -9,3 +9,6 @@ Pemisahan response dilakukan dengan menentukan status_line dan filename terlebih
 
 # Commit 4 Reflection notes
 Match membuat penanganan request jadi lebih rapi karena setiap route langsung dipasangkan dengan response-nya. Penambahan /sleep juga menunjukkan bahwa satu request bisa menahan proses lain, sehingga terlihat bagaimana server bekerja secara berurutan.
+
+# Commit 5 Reflection notes
+Saya melihat bagaimana ThreadPool digunakan untuk menangani banyak request tanpa membuat thread baru setiap kali. Job dikirim melalui channel, lalu diambil oleh worker yang sudah standby untuk dieksekusi. Dengan cara ini, server bisa menangani beberapa request secara bersamaan dan tidak terblokir oleh satu proses yang lama.
